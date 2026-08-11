@@ -2,6 +2,18 @@ const menuButton = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav");
 const header = document.querySelector(".site-header");
 
+// Mobile browsers can restore a previous scroll position when reopening the
+// page. Start at the hero on normal loads, but preserve intentional hash links.
+if (window.innerWidth <= 780 && !window.location.hash) {
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
+
+  window.addEventListener("pageshow", () => {
+    window.requestAnimationFrame(() => window.scrollTo(0, 0));
+  });
+}
+
 menuButton.addEventListener("click", () => {
   const isOpen = nav.classList.toggle("open");
   menuButton.setAttribute("aria-expanded", isOpen);

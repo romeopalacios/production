@@ -802,7 +802,7 @@ body {
   }
 
   .editorial-break span {
-    font-size: clamp(54px, 17vw, 82px);
+    font-size: clamp(42px, 13vw, 70px);
     line-height: 0.92;
   }
 
@@ -811,7 +811,7 @@ body {
   }
 
   .editorial-break span:nth-child(3) {
-    margin-left: 16vw;
+    margin-left: 4vw;
   }
 
   .project-grid {
