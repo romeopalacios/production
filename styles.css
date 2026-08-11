@@ -1,13 +1,13 @@
 :root {
-  --bg: #f6f1e8;
-  --ink: #17213b;
-  --muted: #687086;
-  --line: rgba(23, 33, 59, 0.17);
-  --accent: #ff674d;
-  --accent-soft: #ffd8ce;
-  --secondary: #315bea;
-  --secondary-soft: #dce5ff;
-  --dark: #17213b;
+  --bg: #ebe5dc;
+  --ink: #242b3a;
+  --muted: #70737b;
+  --line: rgba(36, 43, 58, 0.15);
+  --accent: #c2624f;
+  --accent-soft: #e4cdc5;
+  --secondary: #4b648e;
+  --secondary-soft: #d5dbe4;
+  --dark: #1c2330;
   --max: 1440px;
 }
 
@@ -22,7 +22,9 @@ html {
 }
 
 body {
-  background: var(--bg);
+  background:
+    radial-gradient(circle at 85% 8%, rgba(83, 102, 133, 0.08), transparent 32rem),
+    var(--bg);
   color: var(--ink);
   font-family: "DM Sans", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -55,15 +57,29 @@ a {
 }
 
 .brand-mark {
-  width: 30px;
-  height: 30px;
-  background: var(--accent);
-  color: var(--ink);
+  width: 32px;
+  height: 32px;
+  background: var(--dark);
+  color: transparent;
   display: grid;
   place-items: center;
-  font-size: 10px;
-  letter-spacing: -2px;
-  border-radius: 50%;
+  font-size: 0;
+  border-radius: 7px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.brand-mark::before {
+  content: "";
+  width: 15px;
+  height: 17px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--accent) 0 3px,
+    transparent 3px 6px
+  );
+  transform: skewY(-12deg);
 }
 
 .nav {
@@ -278,7 +294,7 @@ footer {
 
 .project-dark {
   background: var(--dark);
-  color: white;
+  color: #f0ece4;
   grid-row: span 2;
 }
 
@@ -525,8 +541,8 @@ body {
   top: 0;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  background: rgba(246, 241, 232, 0.82);
-  border-bottom: 1px solid rgba(23, 33, 59, 0.07);
+  background: rgba(235, 229, 220, 0.82);
+  border-bottom: 1px solid rgba(36, 43, 58, 0.07);
   transition:
     transform 0.35s ease,
     background 0.35s ease,
@@ -538,8 +554,8 @@ body {
 }
 
 .site-header.header-scrolled {
-  background: rgba(246, 241, 232, 0.94);
-  border-color: rgba(23, 33, 59, 0.12);
+  background: rgba(235, 229, 220, 0.94);
+  border-color: rgba(36, 43, 58, 0.12);
 }
 
 .hero-copy {

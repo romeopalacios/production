@@ -2,15 +2,27 @@ const menuButton = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav");
 const header = document.querySelector(".site-header");
 
-// Mobile browsers can restore a previous scroll position when reopening the
-// page. Start at the hero on normal loads, but preserve intentional hash links.
-if (window.innerWidth <= 780 && !window.location.hash) {
+// Mobile browsers can restore both the last hash and scroll position when a
+// tab is reopened. Always begin a fresh mobile page load at the hero; hash
+// navigation still works normally after the page has loaded.
+if (window.innerWidth <= 780) {
   if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";
   }
 
+  if (window.location.hash) {
+    history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+  }
+
+  const resetMobileScroll = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  };
+
+  resetMobileScroll();
+  window.addEventListener("DOMContentLoaded", resetMobileScroll, { once: true });
+  window.addEventListener("load", resetMobileScroll, { once: true });
   window.addEventListener("pageshow", () => {
-    window.requestAnimationFrame(() => window.scrollTo(0, 0));
+    window.requestAnimationFrame(resetMobileScroll);
   });
 }
 
