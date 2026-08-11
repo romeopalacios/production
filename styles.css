@@ -1,13 +1,13 @@
 :root {
-  --bg: #ebe5dc;
-  --ink: #242b3a;
-  --muted: #70737b;
-  --line: rgba(36, 43, 58, 0.15);
-  --accent: #c2624f;
-  --accent-soft: #e4cdc5;
-  --secondary: #4b648e;
-  --secondary-soft: #d5dbe4;
-  --dark: #1c2330;
+  --bg: #0a0a09;
+  --ink: #f5f0e4;
+  --muted: #aaa18e;
+  --line: rgba(212, 175, 55, 0.22);
+  --accent: #d4af37;
+  --accent-soft: #211c0e;
+  --secondary: #e3c766;
+  --secondary-soft: #2a2414;
+  --dark: #030303;
   --max: 1440px;
 }
 
@@ -23,7 +23,7 @@ html {
 
 body {
   background:
-    radial-gradient(circle at 85% 8%, rgba(83, 102, 133, 0.08), transparent 32rem),
+    radial-gradient(circle at 85% 8%, rgba(212, 175, 55, 0.1), transparent 32rem),
     var(--bg);
   color: var(--ink);
   font-family: "DM Sans", Arial, sans-serif;
@@ -183,7 +183,7 @@ footer {
   font-size: clamp(230px, 34vw, 510px);
   line-height: 1;
   letter-spacing: -0.09em;
-  color: rgba(49, 91, 234, 0.075);
+  color: rgba(212, 175, 55, 0.1);
   pointer-events: none;
   user-select: none;
 }
@@ -293,7 +293,7 @@ footer {
 
 .project-dark {
   background: var(--dark);
-  color: #f0ece4;
+  color: var(--ink);
   grid-row: span 2;
 }
 
@@ -303,6 +303,7 @@ footer {
 
 .project-accent {
   background: var(--accent);
+  color: var(--dark);
 }
 
 .project-top {
@@ -337,7 +338,7 @@ footer {
 
 .quote {
   background: var(--secondary);
-  color: #ffffff;
+  color: var(--dark);
   min-height: 520px;
   display: flex;
   align-items: center;
@@ -540,8 +541,8 @@ body {
   top: 0;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  background: rgba(235, 229, 220, 0.82);
-  border-bottom: 1px solid rgba(36, 43, 58, 0.07);
+  background: rgba(10, 10, 9, 0.82);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.12);
   transition:
     transform 0.35s ease,
     background 0.35s ease,
@@ -553,8 +554,8 @@ body {
 }
 
 .site-header.header-scrolled {
-  background: rgba(235, 229, 220, 0.94);
-  border-color: rgba(36, 43, 58, 0.12);
+  background: rgba(10, 10, 9, 0.94);
+  border-color: rgba(212, 175, 55, 0.22);
 }
 
 .hero-copy {
@@ -716,12 +717,12 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 14px;
     background:
-      radial-gradient(circle at 100% 0%, rgba(194, 98, 79, 0.2), transparent 45%),
-      rgba(28, 35, 48, 0.97);
+      radial-gradient(circle at 100% 0%, rgba(212, 175, 55, 0.2), transparent 45%),
+      rgba(3, 3, 3, 0.97);
     flex-direction: column;
     gap: 0;
     font-size: 16px;
-    box-shadow: 0 24px 70px rgba(28, 35, 48, 0.28);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     opacity: 0;
     visibility: hidden;
@@ -737,7 +738,7 @@ body {
   .nav::before {
     content: "Explore";
     padding: 2px 0 16px;
-    color: rgba(235, 229, 220, 0.48);
+    color: rgba(245, 240, 228, 0.48);
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.18em;
@@ -757,7 +758,7 @@ body {
     align-items: center;
     justify-content: space-between;
     min-height: 62px;
-    border-top: 1px solid rgba(235, 229, 220, 0.12);
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
     font-family: "Manrope", sans-serif;
     font-size: 24px;
     font-weight: 500;
