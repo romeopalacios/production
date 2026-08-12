@@ -741,7 +741,7 @@ body {
   .nav::before {
     content: "Explore";
     padding: 2px 0 16px;
-    color: rgba(245, 240, 228, 0.48);
+    color: rgba(255, 253, 247, 0.72);
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.18em;
@@ -766,6 +766,8 @@ body {
     font-size: 24px;
     font-weight: 500;
     letter-spacing: -0.035em;
+    color: #fffdf7;
+    -webkit-text-fill-color: #fffdf7;
     opacity: 0;
     transform: translateY(-6px);
     transition: color 0.2s ease, opacity 0.25s ease, transform 0.3s ease;
@@ -773,6 +775,7 @@ body {
 
   .nav a::before {
     color: var(--accent);
+    -webkit-text-fill-color: var(--accent);
     font-family: "DM Sans", sans-serif;
     font-size: 10px;
     letter-spacing: 0.1em;
@@ -798,6 +801,7 @@ body {
 
   .nav a:active {
     color: var(--accent);
+    -webkit-text-fill-color: var(--accent);
   }
 
   .menu-toggle span {
