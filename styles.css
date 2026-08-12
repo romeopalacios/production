@@ -721,6 +721,7 @@ body {
     background:
       radial-gradient(circle at 100% 0%, rgba(212, 175, 55, 0.2), transparent 45%),
       rgba(3, 3, 3, 0.97);
+    color: var(--ink);
     flex-direction: column;
     gap: 0;
     font-size: 16px;
@@ -796,7 +797,7 @@ body {
   .nav.open a:nth-child(4) { transition-delay: 0.09s; }
 
   .nav a:active {
-    color: var(--accent-soft);
+    color: var(--accent);
   }
 
   .menu-toggle span {
